@@ -1,0 +1,56 @@
+/* General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+/* Container for each result item */
+.result-block {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Paragraph inside result block */
+.result-block p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+/* Button styling */
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Optional: styling for matching/mismatching results */
+.match {
+  color: green;
+  font-weight: bold;
+}
+
+.mismatch {
+  color: red;
+  font-weight: bold;
+}
+
+.missing {
+  color: orange;
+  font-weight: bold;
+}

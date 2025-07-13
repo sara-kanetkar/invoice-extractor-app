@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Highlighted Image</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        text-align: center;
+      }
+      img {
+        max-width: 90%;
+        border: 2px solid #444;
+        border-radius: 8px;
+        margin-top: 20px;
+      }
+      a {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 8px 12px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+      }
+      a:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Highlighted Field in Invoice</h2>
+    <img src="/{{ image_path }}" alt="Highlighted Field" />
+    <br />
+    <a href="/">Back to Upload</a>
+  </body>
+</html>

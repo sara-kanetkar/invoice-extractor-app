@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Extraction Results</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <h2>Extracted Fields</h2>
+
+    {% if fields %} {% for field in fields %}
+    <div class="result-block">
+      <p>
+        <strong>{{ field.key }}</strong>
+        {% if field.source %} ({{ field.source }}) {% endif %} - {{ field.value
+        }} {% if field.confidence %} - {{ field.confidence }}% {% endif %}
+      </p>
+      <form action="{{ url_for('highlight') }}" method="POST">
+        <input type="hidden" name="key" value="{{ field.key }}" />
+        <input type="hidden" name="value" value="{{ field.value }}" />
+        <input type="hidden" name="image" value="{{ field.image }}" />
+        <button type="submit">View Highlight</button>
+      </form>
+    </div>
+    {% endfor %} {% else %}
+    <p>No fields extracted.</p>
+    {% endif %}
+  </body>
+</html>
